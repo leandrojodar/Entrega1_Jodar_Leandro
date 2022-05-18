@@ -26,4 +26,17 @@ def hotel(request):
     hotel = hotel(habitacion= "doble", camas= 1, banio= 1, wifi= "Si", numero= 320)
     hotel.save()
     doc_texto_3 = f"Habitación: {hotel.habitacion}, Cantidad de camas: {hotel.camas}, Cantidad de baños: {hotel.banios}, Wi-Fi: {hotel.wifi}, Número de habitación: {hotel.numero}"
-    return HttpResponse(doc_texto_3)        
+    return HttpResponse(doc_texto_3)
+
+def inicio(request):#No tengo una template de inicio creada
+    return render(request, "AppExcursiones/inicio.html")
+
+def clientes(request):
+    return render(request, "AppExcursiones/clientes.html")
+
+def destinos(request):
+    return render(request, "AppExcursiones/destinos.html")
+
+def hoteles(request):
+    return render(request, "AppExcursiones/hoteles.html")
+
